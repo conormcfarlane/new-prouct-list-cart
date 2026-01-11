@@ -4,6 +4,10 @@ type Props = {}
 
 export default function Cart({}: Props) {
   return (
-    <div>Cart</div>
+    <section>
+      <h2>Your cart (2)</h2>
+      
+      </section>
+
   )
 }
