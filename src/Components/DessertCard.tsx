@@ -1,7 +1,7 @@
-import React from "react";
 import { getImageUrl } from "../utils/imageHelper";
 import AddToCartButton from "./AddToCartButton";
 type DessertCardProps = {
+  id: number;
   name: string;
   category: string;
   price: number;
@@ -13,6 +13,7 @@ type DessertCardProps = {
 };
 
 export default function DessertCard({
+  id,
   name,
   category,
   price,
@@ -36,7 +37,7 @@ export default function DessertCard({
           <img src={mobileImage} />
         </picture>
         <div className="absolute h-fit w-full flex justify-center bottom-0 translate-y-1/2 z-10">
-          <AddToCartButton />
+          <AddToCartButton id={id} />
         </div>
       </div>
 
