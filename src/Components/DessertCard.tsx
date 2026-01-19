@@ -1,3 +1,4 @@
+import { useShoppingCart } from "../context/CartContext";
 import { getImageUrl } from "../utils/imageHelper";
 import AddToCartButton from "./AddToCartButton";
 type DessertCardProps = {
@@ -22,13 +23,14 @@ export default function DessertCard({
   const mobileImage = `/images/${getImageUrl(image.mobile)}`;
   const tabletImage = `/images/${getImageUrl(image.tablet)}`;
   const desktopImage = `/images/${getImageUrl(image.desktop)}`;
+  const { getItemQuantity } = useShoppingCart();
+  const itemQuantity = getItemQuantity(id);
 
-  let itemQuantity = 0;
   return (
-    <section className="flex flex-col gap-9">
+    <section className="flex flex-col gap-9 max-w-fit">
       <div className="relative">
         <picture
-          className={` border-2  block rounded-lg overflow-hidden z-1 ${
+          className={` border-2  block rounded-lg overflow-hidden z-1  max-w-fit ${
             itemQuantity >= 1 ? "border-(--color-Red)" : "border-transparent"
           } `}
         >

@@ -44,7 +44,7 @@ h1 {
   letter-spacing: 0px;
   font-weight: bold;
 }
-.text-preset2 {
+.text-preset2,h2 {
   font-size: 1.5rem;
   line-height: 125%;
   letter-spacing: 0px;
@@ -73,10 +73,11 @@ h1 {
   border: 1px solid white;
   border-radius: 100%;
   width: 20px;
-  height: 20px; 
+  height: 20px;
   padding-inline: 3px;
 }
 
 body {
   font-family: "Red Hat Text", sans-serif;
+  background-color: var(--color-Rose300);
 }
